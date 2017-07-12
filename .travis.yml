@@ -72,5 +72,8 @@ install:
 # command to run tests
 script: 
     - export PYTHONPATH=$PYTHONPATH:.
-    - echo numpy version; python -c "import numpy; print(numpy.version.version)"
+    - echo numpy version; python -c "import numpy; print(numpy.__version__)"
+    - echo matplotlib version; python -c "import matplotlib; print(matplotlib.__version__)"
+    - echo flopy version; python -c "import flopy; print(flopy.__build__)"
+    - echo pymake version; python -c "import pymake; print(pymake.__build__)"
     #- nosetests -v -w ./autotest
